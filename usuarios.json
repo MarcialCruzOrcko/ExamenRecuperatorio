@@ -1,0 +1,33 @@
+[
+    {
+      "username": "admin",
+      "password": "admin123",
+      "role": "Administrador",
+      "permissions": ["admin_permission1", "admin_permission2", "admin_permission3"],
+      "full_name": "Juan Pérez",
+      "email": "juan.perez@admin.com",
+      "address": "Calle Ficticia 123, Ciudad XYZ",
+      "phone": "+1234567890"
+    },
+    {
+      "username": "cliente",
+      "password": "cliente123",
+      "role": "Cliente",
+      "permissions": ["cliente_permission1", "cliente_permission2"],
+      "full_name": "Ana García",
+      "email": "ana.garcia@cliente.com",
+      "address": "Av. Principal 456, Ciudad ABC",
+      "phone": "+0987654321"
+    },
+    {
+      "username": "invitado",
+      "password": "invitado123",
+      "role": "Invitado",
+      "permissions": ["invitado_permission1", "invitado_permission2"],
+      "full_name": "Carlos Rodríguez",
+      "email": "carlos.rodriguez@invitado.com",
+      "address": "Calle Secundaria 789, Ciudad DEF",
+      "phone": "+1122334455"
+    }
+  ]
+  

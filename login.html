@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .container h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #6c757d;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #bfa13e;
+            border-color: #bfa13e;
+        }
+        .btn-primary:hover {
+            background-color: #a6822c;
+            border-color: #a6822c;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #6c757d;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="text-center">Acceso al Sistema</h2>
+        <form id="login-form">
+            <div class="mb-3">
+                <label for="username" class="form-label">Nombre de Usuario</label>
+                <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Startups. Todos los derechos reservados.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simulando el archivo JSON con usuarios
+        const users = [
+            {
+                "username": "admin",
+                "password": "admin123",
+                "role": "Administrador",
+                "permissions": ["admin_permission1", "admin_permission2", "admin_permission3"],
+                "full_name": "Juan Pérez",
+                "email": "juan.perez@admin.com",
+                "address": "Calle Ficticia 123, Ciudad XYZ",
+                "phone": "+1234567890"
+            },
+            {
+                "username": "cliente",
+                "password": "cliente123",
+                "role": "Cliente",
+                "permissions": ["cliente_permission1", "cliente_permission2"],
+                "full_name": "Ana García",
+                "email": "ana.garcia@cliente.com",
+                "address": "Av. Principal 456, Ciudad ABC",
+                "phone": "+0987654321"
+            },
+            {
+                "username": "invitado",
+                "password": "invitado123",
+                "role": "Invitado",
+                "permissions": ["invitado_permission1", "invitado_permission2"],
+                "full_name": "Carlos Rodríguez",
+                "email": "carlos.rodriguez@invitado.com",
+                "address": "Calle Secundaria 789, Ciudad DEF",
+                "phone": "+1122334455"
+            }
+        ];
+
+        // Función para manejar el formulario de login
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Buscar al usuario en el JSON
+            const user = users.find(user => user.username === username && user.password === password);
+            
+            if (user) {
+                // Redirigir según el rol del usuario
+                if (user.role === "Administrador") {
+                    window.location.href = "admin-panel.html";  // Redirige al panel del administrador
+                } else if (user.role === "Cliente") {
+                    window.location.href = "cliente-panel.html";  // Redirige al perfil de cliente
+                } else if (user.role === "Invitado") {
+                    window.location.href = "invitado-panel.html";  // Redirige al perfil de invitado
+                }
+            } else {
+                alert("Usuario o contraseña incorrectos.");
+            }
+        });
+    </script>
+</body>
+</html>

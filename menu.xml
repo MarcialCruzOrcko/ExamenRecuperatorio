@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <mainMenu>
+        <item>
+            <nombre>Iniciar Sesion</nombre>
+            <link>login.html</link>
+        </item>
+        <item>
+            <nombre>Inicio</nombre>
+            <link>home.html</link>
+        </item>
+        <item>
+            <nombre>Participar en la Encuesta</nombre>
+            <link>participar.html</link>
+        </item>
+        <item>
+            <nombre>Resultados Personales</nombre>
+            <link>resultados.html</link>
+        </item>
+        <item>
+            <nombre>Estadísticas Generales</nombre>
+            <link>estadisticas.html</link>
+        </item>
+        <item>
+            <nombre>Consejos Tecnológicos</nombre>
+            <link>consejos.html</link>
+        </item>
+        <item>
+            <nombre>Recursos</nombre>
+            <link>recursos.html</link>
+        </item>
+        <item>
+            <nombre>FAQ y Ayuda</nombre>
+            <link>faq.html</link>
+        </item>
+        <item>
+            <nombre>Contacto</nombre>
+            <link>contacto.html</link>
+        </item>
+    </mainMenu>
+</menu>
